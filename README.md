@@ -2,7 +2,7 @@
 
 📢 This paper has been accepted to CVPR 2025! 🎉
 
-[paper](https://pan.baidu.com/s/1_PBCzizxu-ndU2l9TdPlBw?pwd=kmh9 ) | code | results
+[main paper](https://pan.baidu.com/s/1CQz1pBSBw-jjY5EK9iVzWg?pwd=xun8) | [supplementary materials](https://pan.baidu.com/s/193YTr_mGHbU0oDIimk8fiQ?pwd=gbj7) | code | results
 
 ## Abstract
 
