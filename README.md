@@ -2,12 +2,57 @@
 
 📢 This paper has been accepted to CVPR 2025! 🎉
 
-[main paper](https://pan.baidu.com/s/1CQz1pBSBw-jjY5EK9iVzWg?pwd=xun8) | [supplementary materials](https://pan.baidu.com/s/193YTr_mGHbU0oDIimk8fiQ?pwd=gbj7) | code | [results](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23)
+[main paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [supplementary materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9) | code | [results](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23)
+
+
+
+**TODO:**
+
+* [ ] Release the official implementation of URWKV, including training and inference scripts.
+
+* [ ] Release pre-trained weights for reproducibility.
+
+* [ ] Add visual comparisons with SOTA methods across various benchmark datasets.
+
+* [ ] Refactor and document code for clarity and reproducibility.
 
 ## Abstract
 
 &#x20;Existing low-light image enhancement (LLIE) and joint LLIE and deblurring (LLIE-deblur) models have made strides in addressing predefined degradations, yet they are often constrained by  dynamically coupled degradations. To address these challenges, we introduce a Unified Receptance Weighted Key Value (URWKV) model with multi-state perspective, enabling flexible and effective degradation restoration for low-light images. Specifically, we customize the core URWKV block to perceive and analyze complex degradations by leveraging multiple intra- and inter-stage states. First, inspired by the pupil mechanism in the human visual system, we propose Luminance-adaptive Normalization (LAN) that adjusts normalization parameters based on rich inter-stage states, allowing for adaptive, scene-aware luminance modulation. Second, we aggregate multiple intra-stage states through exponential moving average approach, effectively capturing subtle variations while mitigating information loss inherent in the single-state mechanism. To reduce the degradation effects commonly associated with conventional skip connections, we propose the State-aware Selective Fusion (SSF) module, which dynamically aligns and integrates multi-state features across encoder stages, selectively fusing contextual information. In comparison to state-of-the-art models, our URWKV model achieves superior performance on various benchmarks,  while requiring significantly fewer parameters and computational resources.
 
-## Code Availability
+## Overview
 
-The code will be released after the official publication of the paper. Stay tuned!
+![](README_md_files/6cf966f0-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
+
+
+
+## Main Results
+
+Consistent with [BiFormer](https://github.com/FZU-N/BiFormer), results are measured using `measure_pair.py`. It should be noted that all metrics in our method are computed in the sRGB space, and no GT Mean-related techniques are applied.
+
+
+
+![](README_md_files/9e45a430-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
+
+![](README_md_files/e4f9c500-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
+
+
+
+**Note:** To ensure fairness, if a comparison method does not provide pretrained weights, we retrain it using the recommended settings provided by the authors. Otherwise, we use the officially released pretrained weights for evaluation. All results are evaluated using a unified script, `measure_pair.py`. In this paper, the following methods were retrained: SNR-Net, FourLLIE, UHDFour, LLFormer, Retinexformer, BiFormer, RetinexMamba, LEDNet, PDHAT, MIRNet, Restormer, and MambaIR. The corresponding visual comparison results will be released later.
+
+## Citation
+
+If you find this work useful for your research, please cite:
+
+```markup
+@inproceedings{xu2025urwkv,
+  title={URWKV: Unified RWKV Model with Multi-state Perspective for Low-light Image Restoration},
+  author={Xu, Rui and Niu, Yuzhen and Li, Yuezhou and Xu, Huangbiao and Liu, Wenxi and Chen, Yuzhong},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={21267--21276},
+  year={2025}
+}
+```
+
+
+
