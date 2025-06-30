@@ -2,19 +2,23 @@
 
 📢 This paper has been accepted to CVPR 2025! 🎉
 
-[main paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [supplementary materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9) | code | [results](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23)
-
-
+[main paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [supplementary materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9)  | [results](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23)
 
 **TODO:**
 
-* [ ] Release the official implementation of URWKV, including training and inference scripts.
+* [x] Release the official implementation of URWKV, including training and inference scripts. This is a relatively rough version, so you may need some time to configure the environment and paths.
 
-* [ ] Release pre-trained weights for reproducibility.
+* [x] Release pre-trained weights for reproducibility.&#x20;
 
 * [ ] Add visual comparisons with SOTA methods across various benchmark datasets.
 
 * [ ] Refactor and document code for clarity and reproducibility.
+
+**Note:**
+
+* The weights for SMID and MIT-5K may have been overwritten. You can either train them yourself or wait for us to re-train and upload them later.
+
+* Since we haven't done much hyperparameter tuning, you are encouraged to explore better configurations to potentially improve the model's performance.
 
 ## Abstract
 
@@ -24,19 +28,13 @@
 
 ![](README_md_files/6cf966f0-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
 
-
-
 ## Main Results
 
 Consistent with [BiFormer](https://github.com/FZU-N/BiFormer), results are measured using `measure_pair.py`. It should be noted that all metrics in our method are computed in the sRGB space, and no GT Mean-related techniques are applied.
 
-
-
 ![](README_md_files/9e45a430-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
 
 ![](README_md_files/e4f9c500-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
-
-
 
 **Note:** To ensure fairness, if a comparison method does not provide pretrained weights, we retrain it using the recommended settings provided by the authors. Otherwise, we use the officially released pretrained weights for evaluation. All results are evaluated using a unified script, `measure_pair.py`. In this paper, the following methods were retrained: SNR-Net, FourLLIE, UHDFour, LLFormer, Retinexformer, BiFormer, RetinexMamba, LEDNet, PDHAT, MIRNet, Restormer, and MambaIR. The corresponding visual comparison results will be released later.
 
@@ -53,6 +51,4 @@ If you find this work useful for your research, please cite:
   year={2025}
 }
 ```
-
-
 

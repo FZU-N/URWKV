@@ -1,0 +1,29 @@
+# Training configuration
+GPU: [1]
+
+VERBOSE: False
+
+MODEL:
+  MODE: 'SID'
+
+# Optimization arguments.
+OPTIM:
+  # BATCH: 4 # 8
+  # EPOCHS: 1000  #200
+  # # EPOCH_DECAY: [10]
+  # LR_INITIAL: 2e-4  # 1e-4
+  # LR_MIN: 1e-6
+  # BETA1: 0.9
+
+TRAINING:
+  VAL_AFTER_EVERY: 10  # 1
+  RESUME: False   # False
+  PATCH_SIZES: [128, 256, 384, 600]
+  BATCH_SIZES: [4, 2, 2,  1]
+  EPOCHS_PER_SIZE: [250, 250, 250, 250]
+  # PATCH_SIZES: [128, 192, 256, 320, 384, 400]
+  # BATCH_SIZES: [16, 16, 8, 8, 4, 2]
+  # EPOCHS_PER_SIZE: [300, 200, 200, 100, 100 ,100]
+  TRAIN_DIR: '/data/xr/Dataset/light_dataset/SID_png/train/'       # path to training data
+  VAL_DIR: '/data/xr/Dataset/light_dataset/SID_png/eval/' # path to validation data
+  SAVE_DIR: './checkpoints/SID/'           # path to save models and images
