@@ -16,7 +16,7 @@
 
 **Note:**
 
-* The weights for SMID and MIT-5K may have been overwritten. You can either train them yourself or wait for us to re-train and upload them later.
+* The weights for SMID and MIT-5K may have been overwritten. You can either train them yourself or wait for us to re-train and upload them later. Pre-trained weights for other datasets can be downloaded from [here](https://pan.baidu.com/s/1UuKmG6WcaCWdwkj3_jsPPg?pwd=5ady).
 
 * Since we haven't done much hyperparameter tuning, you are encouraged to explore better configurations to potentially improve the model's performance.
 
