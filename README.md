@@ -2,7 +2,7 @@
 
 📢 This paper has been accepted to CVPR 2025! 🎉
 
-[main paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [supplementary materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9)  | [results](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23)
+[main paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [supplementary materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9)
 
 **TODO:**
 
@@ -14,11 +14,15 @@
 
 * [ ] Refactor and document code for clarity and reproducibility.
 
-**Note:**
+**Notes and Links:**
 
-* The weights for SMID and MIT-5K may have been overwritten. You can either train them yourself or wait for us to re-train and upload them later. Pre-trained weights for other datasets can be downloaded from [here](https://pan.baidu.com/s/1UuKmG6WcaCWdwkj3_jsPPg?pwd=5ady).
+* **Results:** Visual results of URWKV can be downloaded from [here](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23).
 
-* Since we haven't done much hyperparameter tuning, you are encouraged to explore better configurations to potentially improve the model's performance.
+* **Pre-trained weights:** The weights for SMID and MIT-5K may have been overwritten. You can either train them yourself or wait for us to re-train and upload them later. Pre-trained weights for other datasets can be downloaded from [here](https://pan.baidu.com/s/1UuKmG6WcaCWdwkj3_jsPPg?pwd=5ady).
+
+* **Datasets:** All datasets used in this work can be downloaded from [here](https://pan.baidu.com/s/1R0L4QEXw0uOyWyVp1x6Zig?pwd=2x5i).
+
+* **Hyperparameter tuning:** Since we haven't done much hyperparameter tuning, you are encouraged to explore better configurations to potentially improve the model's performance.
 
 ## Abstract
 
@@ -36,7 +40,9 @@ Consistent with [BiFormer](https://github.com/FZU-N/BiFormer), results are measu
 
 ![](README_md_files/e4f9c500-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
 
-**Note:** To ensure fairness, if a comparison method does not provide pretrained weights, we retrain it using the recommended settings provided by the authors. Otherwise, we use the officially released pretrained weights for evaluation. All results are evaluated using a unified script, `measure_pair.py`. In this paper, the following methods were retrained: SNR-Net, FourLLIE, UHDFour, LLFormer, Retinexformer, BiFormer, RetinexMamba, LEDNet, PDHAT, MIRNet, Restormer, and MambaIR. The corresponding visual comparison results will be released later.
+
+
+To ensure fairness, if a comparison method does not provide pretrained weights, we retrain it using the recommended settings provided by the authors. Otherwise, we use the officially released pretrained weights for evaluation. All results are evaluated using a unified script, `measure_pair.py`. In this paper, the following methods were retrained: SNR-Net, FourLLIE, UHDFour, LLFormer, Retinexformer, BiFormer, RetinexMamba, LEDNet, PDHAT, MIRNet, Restormer, and MambaIR. The corresponding visual comparison results will be released later.
 
 ## Citation
 
