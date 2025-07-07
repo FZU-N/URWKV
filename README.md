@@ -40,9 +40,51 @@ Consistent with [BiFormer](https://github.com/FZU-N/BiFormer), results are measu
 
 ![](README_md_files/e4f9c500-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
 
-
-
 To ensure fairness, if a comparison method does not provide pretrained weights, we retrain it using the recommended settings provided by the authors. Otherwise, we use the officially released pretrained weights for evaluation. All results are evaluated using a unified script, `measure_pair.py`. In this paper, the following methods were retrained: SNR-Net, FourLLIE, UHDFour, LLFormer, Retinexformer, BiFormer, RetinexMamba, LEDNet, PDHAT, MIRNet, Restormer, and MambaIR. The corresponding visual comparison results will be released later.
+
+## Environment Setup
+
+### 1. Create and Activate a Conda Environment
+
+```markup
+conda create --name URWKV python=3.9
+conda activate URWKV 
+```
+
+### 2. Install PyTorch and Dependencies
+
+Install PyTorch with CUDA 11.3 support:
+
+```markup
+conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
+```
+
+Install cuDNN:
+
+```markup
+conda install cudnn
+```
+
+### 3. Install Python Dependencies
+
+```markup
+pip install pyyaml yacs tqdm colorama pandas natsort  
+pip install matplotlib tensorboardX 
+pip install cython thop prefetch_generator 
+pip install opencv-python scikit-image  
+pip install timm einops mmcls 
+pip install pytorch_msssim IQA_pytorch pyiqa lpips
+pip install numpy==1.26.4
+```
+
+### 4. Install MMCV
+
+```markup
+pip install -U openmim
+mim install mmcv==1.7.1
+```
+
+> ⚠️ Note: If you encounter an error related to Ninja while compiling C++ extensions (e.g., Ninja is required to load C++ extensions), install Ninja with:  `sudo apt-get install ninja-build`
 
 ## Citation
 
