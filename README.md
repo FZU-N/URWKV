@@ -100,3 +100,13 @@ If you find this work useful for your research, please cite:
 }
 ```
 
+## License
+
+This repository is released under the Apache 2.0 license as found in the LICENSE file.
+
+## Acknowledgement
+
+URWKV is built with reference to the code of the following projects: [RWKV](https://github.com/BlinkDL/RWKV-LM) and [Vision-RWKV](https://github.com/OpenGVLab/Vision-RWKV).&#x20;
+
+
+
