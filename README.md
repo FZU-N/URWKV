@@ -2,33 +2,39 @@
 
 📢 This paper has been accepted to CVPR 2025! 🎉
 
-[main paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [supplementary materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9)
+[📄 Main Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [📎 Supplementary Materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [🖼️ Poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9)
 
-**TODO:**
+## Weights and Results
 
-* [x] Release the official implementation of URWKV, including training and inference scripts. This is a relatively rough version, so you may need some time to configure the environment and paths.
+All released resources are collected in the following Baidu Pan archives:
 
-* [x] Release pre-trained weights for reproducibility.&#x20;
+* 🖼️ **Results:** [Download](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23) (extraction code: `kn23`). In addition, results of the comparison method [BiFormer](https://github.com/FZU-N/BiFormer) are available on [Baidu Pan](https://pan.baidu.com/s/12g91-HIxCdq36DV-Pt8wvQ?pwd=ssfh) (extraction code: `ssfh`).
 
-* [ ] Add visual comparisons with SOTA methods across various benchmark datasets.
+* ⚙️ **Pre-trained weights:** [Download](https://pan.baidu.com/s/1UuKmG6WcaCWdwkj3_jsPPg?pwd=5ady) (extraction code: `5ady`)
 
-* [ ] Refactor and document code for clarity and reproducibility.
+* 🗂️ **Datasets:** [Download](https://pan.baidu.com/s/1R0L4QEXw0uOyWyVp1x6Zig?pwd=2x5i) (extraction code: `2x5i`)
 
-**Notes and Links:**
+All metrics below are reported in the sRGB space using `measure_pair.py`, without GT Mean-related post-processing.
 
-* **Results:** Visual results of URWKV can be downloaded from [here](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23).
+|      Dataset     | PSNR (dB) ↑ | SSIM ↑ |
+| :--------------: | :---------: | :----: |
+|      LOL-v1      |    24.27    |  0.856 |
+|    LOL-v2-real   |    23.11    |  0.874 |
+| LOL-v2-synthetic |    26.36    |  0.944 |
+|        SID       |    23.11    |  0.673 |
+|       SMID       |    29.44    |  0.826 |
+|    SDSD-indoor   |    31.24    |  0.911 |
+|   SDSD-outdoor   |    29.99    |  0.887 |
+|  MIT-Adobe FiveK |    26.08    |  0.936 |
+|     LOL-blur     |    27.27    |  0.890 |
 
-* **Pre-trained weights:** The weights for SMID and MIT-5K may have been overwritten. You can either train them yourself or wait for us to re-train and upload them later. Pre-trained weights for other datasets can be downloaded from [here](https://pan.baidu.com/s/1UuKmG6WcaCWdwkj3_jsPPg?pwd=5ady).
-
-* **Datasets:** All datasets used in this work can be downloaded from [here](https://pan.baidu.com/s/1R0L4QEXw0uOyWyVp1x6Zig?pwd=2x5i).
-
-* **Hyperparameter tuning:** Since we haven't done much hyperparameter tuning, you are encouraged to explore better configurations to potentially improve the model's performance.
+> ⚠️ **Missing weights:** The pretrained weights for **SMID** and **MIT-Adobe FiveK** were accidentally overwritten and are currently unavailable. You can retrain these models using the provided configurations. We will update this section if the weights are recovered or retrained.
 
 ## Abstract
 
 &#x20;Existing low-light image enhancement (LLIE) and joint LLIE and deblurring (LLIE-deblur) models have made strides in addressing predefined degradations, yet they are often constrained by  dynamically coupled degradations. To address these challenges, we introduce a Unified Receptance Weighted Key Value (URWKV) model with multi-state perspective, enabling flexible and effective degradation restoration for low-light images. Specifically, we customize the core URWKV block to perceive and analyze complex degradations by leveraging multiple intra- and inter-stage states. First, inspired by the pupil mechanism in the human visual system, we propose Luminance-adaptive Normalization (LAN) that adjusts normalization parameters based on rich inter-stage states, allowing for adaptive, scene-aware luminance modulation. Second, we aggregate multiple intra-stage states through exponential moving average approach, effectively capturing subtle variations while mitigating information loss inherent in the single-state mechanism. To reduce the degradation effects commonly associated with conventional skip connections, we propose the State-aware Selective Fusion (SSF) module, which dynamically aligns and integrates multi-state features across encoder stages, selectively fusing contextual information. In comparison to state-of-the-art models, our URWKV model achieves superior performance on various benchmarks,  while requiring significantly fewer parameters and computational resources.
 
-## Overview
+## 🧩 Overview
 
 ![](README_md_files/6cf966f0-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
 
@@ -40,7 +46,7 @@ Consistent with [BiFormer](https://github.com/FZU-N/BiFormer), results are measu
 
 ![](README_md_files/e4f9c500-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
 
-To ensure fairness, if a comparison method does not provide pretrained weights, we retrain it using the recommended settings provided by the authors. Otherwise, we use the officially released pretrained weights for evaluation. All results are evaluated using a unified script, `measure_pair.py`. In this paper, the following methods were retrained: SNR-Net, FourLLIE, UHDFour, LLFormer, Retinexformer, BiFormer, RetinexMamba, LEDNet, PDHAT, MIRNet, Restormer, and MambaIR. The corresponding visual comparison results will be released later.
+To ensure fairness, if a comparison method does not provide pretrained weights, we retrain it using the recommended settings provided by the authors. Otherwise, we use the officially released pretrained weights for evaluation. All results are evaluated using a unified script, `measure_pair.py`. In this paper, the following methods were retrained: SNR-Net, FourLLIE, UHDFour, LLFormer, Retinexformer, BiFormer, RetinexMamba, LEDNet, PDHAT, MIRNet, Restormer, and MambaIR.
 
 ## Environment Setup
 
@@ -85,6 +91,12 @@ mim install mmcv==1.7.1
 ```
 
 > ⚠️ Note: If you encounter an error related to Ninja while compiling C++ extensions (e.g., Ninja is required to load C++ extensions), install Ninja with:  `sudo apt-get install ninja-build`
+
+### 🔧 Training Notes
+
+- **Training stability:** Instability observed in some training runs may be related to the CUDA environment or version compatibility. The cause has not yet been confirmed, and this issue remains under investigation. If you encounter it, please record your CUDA and PyTorch versions and GPU model to help with troubleshooting.
+
+- **Hyperparameter tuning:** Since we haven't done extensive hyperparameter tuning, you are encouraged to explore better configurations to potentially improve performance.
 
 ## Citation
 
