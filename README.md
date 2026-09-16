@@ -2,7 +2,7 @@
 
 📢 This paper has been accepted to CVPR 2025! 🎉
 
-[📄 Main Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [📎 Supplementary Materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [🖼️ Poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9)
+[Main Paper](https://openaccess.thecvf.com/content/CVPR2025/papers/Xu_URWKV_Unified_RWKV_Model_with_Multi-state_Perspective_for_Low-light_Image_CVPR_2025_paper.pdf) | [Supplementary Materials](https://openaccess.thecvf.com/content/CVPR2025/supplemental/Xu_URWKV_Unified_RWKV_CVPR_2025_supplemental.pdf) | [Poster](https://pan.baidu.com/s/18Z84hr2_HlXGzy1XXcZMIw?pwd=56u9)
 
 ## Weights and Results
 
@@ -16,17 +16,17 @@ All released resources are collected in the following Baidu Pan archives:
 
 All metrics below are reported in the sRGB space using `measure_pair.py`, without GT Mean-related post-processing.
 
-|      Dataset     | PSNR (dB) ↑ | SSIM ↑ |
-| :--------------: | :---------: | :----: |
-|      LOL-v1      |    24.27    |  0.856 |
-|    LOL-v2-real   |    23.11    |  0.874 |
+| Dataset          | PSNR (dB) ↑ | SSIM ↑ |
+| :--------------- | :---------: | :----: |
+| LOL-v1           |    24.27    |  0.856 |
+| LOL-v2-real      |    23.11    |  0.874 |
 | LOL-v2-synthetic |    26.36    |  0.944 |
-|        SID       |    23.11    |  0.673 |
-|       SMID       |    29.44    |  0.826 |
-|    SDSD-indoor   |    31.24    |  0.911 |
-|   SDSD-outdoor   |    29.99    |  0.887 |
-|  MIT-Adobe FiveK |    26.08    |  0.936 |
-|     LOL-blur     |    27.27    |  0.890 |
+| SID              |    23.11    |  0.673 |
+| SMID             |    29.44    |  0.826 |
+| SDSD-indoor      |    31.24    |  0.911 |
+| SDSD-outdoor     |    29.99    |  0.887 |
+| MIT-Adobe FiveK  |    26.08    |  0.936 |
+| LOL-blur         |    27.27    |  0.890 |
 
 > ⚠️ **Missing weights:** The pretrained weights for **SMID** and **MIT-Adobe FiveK** were accidentally overwritten and are currently unavailable. You can retrain these models using the provided configurations. We will update this section if the weights are recovered or retrained.
 
@@ -34,7 +34,7 @@ All metrics below are reported in the sRGB space using `measure_pair.py`, withou
 
 &#x20;Existing low-light image enhancement (LLIE) and joint LLIE and deblurring (LLIE-deblur) models have made strides in addressing predefined degradations, yet they are often constrained by  dynamically coupled degradations. To address these challenges, we introduce a Unified Receptance Weighted Key Value (URWKV) model with multi-state perspective, enabling flexible and effective degradation restoration for low-light images. Specifically, we customize the core URWKV block to perceive and analyze complex degradations by leveraging multiple intra- and inter-stage states. First, inspired by the pupil mechanism in the human visual system, we propose Luminance-adaptive Normalization (LAN) that adjusts normalization parameters based on rich inter-stage states, allowing for adaptive, scene-aware luminance modulation. Second, we aggregate multiple intra-stage states through exponential moving average approach, effectively capturing subtle variations while mitigating information loss inherent in the single-state mechanism. To reduce the degradation effects commonly associated with conventional skip connections, we propose the State-aware Selective Fusion (SSF) module, which dynamically aligns and integrates multi-state features across encoder stages, selectively fusing contextual information. In comparison to state-of-the-art models, our URWKV model achieves superior performance on various benchmarks,  while requiring significantly fewer parameters and computational resources.
 
-## 🧩 Overview
+## Overview
 
 ![](README_md_files/6cf966f0-5190-11f0-847b-8bd8db6e5334.jpeg?v=1&type=image)
 
@@ -94,9 +94,9 @@ mim install mmcv==1.7.1
 
 ### 🔧 Training Notes
 
-- **Training stability:** Instability observed in some training runs may be related to the CUDA environment or version compatibility. The cause has not yet been confirmed, and this issue remains under investigation. If you encounter it, please record your CUDA and PyTorch versions and GPU model to help with troubleshooting.
+* **Training stability:** Instability observed in some training runs may be related to the CUDA environment or version compatibility. The cause has not yet been confirmed, and this issue remains under investigation.
 
-- **Hyperparameter tuning:** Since we haven't done extensive hyperparameter tuning, you are encouraged to explore better configurations to potentially improve performance.
+* **Hyperparameter tuning:** Since we haven't done extensive hyperparameter tuning, you are encouraged to explore better configurations to potentially improve performance.
 
 ## Citation
 
