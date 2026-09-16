@@ -8,7 +8,9 @@
 
 All released resources are collected in the following Baidu Pan archives:
 
-* **Results:** [Download](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23) (extraction code: `kn23`). In addition, results of the comparison method [BiFormer](https://github.com/FZU-N/BiFormer) are available on [Baidu Pan](https://pan.baidu.com/s/12g91-HIxCdq36DV-Pt8wvQ?pwd=ssfh) (extraction code: `ssfh`).
+* **Results:** [Download](https://pan.baidu.com/s/1EiuCvuj_Ycw0YEDpzhFLJg?pwd=kn23) (extraction code: `kn23`).&#x20;
+
+* In addition, results of the comparison method [BiFormer](https://github.com/FZU-N/BiFormer) are available on [Baidu Pan](https://pan.baidu.com/s/12g91-HIxCdq36DV-Pt8wvQ?pwd=ssfh) (extraction code: `ssfh`).
 
 * **Pre-trained weights:** [Download](https://pan.baidu.com/s/1UuKmG6WcaCWdwkj3_jsPPg?pwd=5ady) (extraction code: `5ady`)
 
