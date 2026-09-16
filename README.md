@@ -16,17 +16,10 @@ All released resources are collected in the following Baidu Pan archives:
 
 All metrics below are reported in the sRGB space using `measure_pair.py`, without GT Mean-related post-processing.
 
-| Dataset          | PSNR (dB) ↑ | SSIM ↑ |
-| :--------------- | :---------: | :----: |
-| LOL-v1           |    24.27    |  0.856 |
-| LOL-v2-real      |    23.11    |  0.874 |
-| LOL-v2-synthetic |    26.36    |  0.944 |
-| SID              |    23.11    |  0.673 |
-| SMID             |    29.44    |  0.826 |
-| SDSD-indoor      |    31.24    |  0.911 |
-| SDSD-outdoor     |    29.99    |  0.887 |
-| MIT-Adobe FiveK  |    26.08    |  0.936 |
-| LOL-blur         |    27.27    |  0.890 |
+| Metric | LOL-v1 | LOL-v2-real | LOL-v2-synthetic | SID | SMID | SDSD-indoor | SDSD-outdoor | MIT-Adobe FiveK | LOL-blur |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| PSNR (dB) ↑ | 24.27 | 23.11 | 26.36 | 23.11 | 29.44 | 31.24 | 29.99 | 26.08 | 27.27 |
+| SSIM ↑ | 0.856 | 0.874 | 0.944 | 0.673 | 0.826 | 0.911 | 0.887 | 0.936 | 0.890 |
 
 > ⚠️ **Missing weights:** The pretrained weights for **SMID** and **MIT-Adobe FiveK** were accidentally overwritten and are currently unavailable. You can retrain these models using the provided configurations. We will update this section if the weights are recovered or retrained.
 
