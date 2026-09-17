@@ -12,7 +12,7 @@ All released resources are collected in the following Baidu Pan archives:
 
 * In addition, results of the comparison method [BiFormer](https://github.com/FZU-N/BiFormer) are available on [Baidu Pan](https://pan.baidu.com/s/12g91-HIxCdq36DV-Pt8wvQ?pwd=ssfh) (extraction code: `ssfh`).
 
-* **Pre-trained weights:** [Download](https://pan.baidu.com/s/1UuKmG6WcaCWdwkj3_jsPPg?pwd=5ady) (extraction code: `5ady`)
+* **Weights:** [Download](https://pan.baidu.com/s/1UuKmG6WcaCWdwkj3_jsPPg?pwd=5ady) (extraction code: `5ady`)
 
 * **Datasets:** [Download](https://pan.baidu.com/s/1R0L4QEXw0uOyWyVp1x6Zig?pwd=2x5i) (extraction code: `2x5i`)
 
