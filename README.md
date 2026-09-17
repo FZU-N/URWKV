@@ -20,8 +20,8 @@ Quick overview of URWKV's performance across benchmark datasets:
 
 | Metric      | LOL-v1 | LOL-v2-real | LOL-v2-sync |  SID  |  SMID | SDSD-indoor | SDSD-outdoor | MIT-Adobe FiveK | LOL-blur |
 | :---------- | :----: | :---------: | :---------: | :---: | :---: | :---------: | :----------: | :-------------: | :------: |
-| PSNR (dB) ↑ |  24.27 |    23.11    |    26.36    | 23.11 | 29.44 |    31.24    |     29.99    |      26.08      |   27.27  |
-| SSIM ↑      |  0.856 |    0.874    |    0.944    | 0.673 | 0.826 |    0.911    |     0.887    |      0.936      |   0.890  |
+| PSNR |  24.27 |    23.11    |    26.36    | 23.11 | 29.44 |    31.24    |     29.99    |      26.08      |   27.27  |
+| SSIM       |  0.856 |    0.874    |    0.944    | 0.673 | 0.826 |    0.911    |     0.887    |      0.936      |   0.890  |
 
 > ⚠️ **Missing weights:** The pretrained weights for **SMID** and **MIT-Adobe FiveK** were accidentally overwritten and are currently unavailable. You can retrain these models using the provided configurations. We will update this section if the weights are recovered or retrained.
 
