@@ -16,7 +16,7 @@ All released resources are collected in the following Baidu Pan archives:
 
 * **Datasets:** [Download](https://pan.baidu.com/s/1R0L4QEXw0uOyWyVp1x6Zig?pwd=2x5i) (extraction code: `2x5i`)
 
-All metrics below are reported in the sRGB space using `measure_pair.py`, without GT Mean-related post-processing.
+Quick overview of URWKV's performance across benchmark datasets:
 
 | Metric      | LOL-v1 | LOL-v2-real | LOL-v2-sync |  SID  |  SMID | SDSD-indoor | SDSD-outdoor | MIT-Adobe FiveK | LOL-blur |
 | :---------- | :----: | :---------: | :---------: | :---: | :---: | :---------: | :----------: | :-------------: | :------: |
